@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sir_conch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="bgNight" translatesAutoresizingMaskIntoConstraints="NO" id="38F-Kk-As1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kh0-YH-Myr">
+                                <rect key="frame" x="42" y="151" width="291" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="0.22964093543046357" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ah0-Zr-oUl"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldValueChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="j8e-fn-5ag"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wb1-6P-WLg"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소라고둥님께 물어봐" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6S-Wq-I46" userLabel="lbTitle">
+                                <rect key="frame" x="0.0" y="100" width="375" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="DoF-t8-87A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlW-N5-225">
+                                <rect key="frame" x="147.66666666666666" y="220" width="80" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnRe" translatesAutoresizingMaskIntoConstraints="NO" id="UOx-cR-ZIi">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-jK-J9J">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Gbu-3H-AsU"/>
+                                            <constraint firstAttribute="width" constant="80" id="keT-ug-Nen"/>
+                                        </constraints>
+                                        <state key="normal" title="질문하기">
+                                            <color key="titleColor" red="0.078678900539158311" green="0.024827904457181246" blue="0.10716540404040409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BM5-uE-zPx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SeR-jK-J9J" secondAttribute="bottom" id="4fU-UI-eBh"/>
+                                    <constraint firstItem="SeR-jK-J9J" firstAttribute="top" secondItem="hlW-N5-225" secondAttribute="top" id="Bv2-d8-0vG"/>
+                                    <constraint firstItem="UOx-cR-ZIi" firstAttribute="top" secondItem="hlW-N5-225" secondAttribute="top" id="Ht9-gY-sVd"/>
+                                    <constraint firstItem="SeR-jK-J9J" firstAttribute="leading" secondItem="hlW-N5-225" secondAttribute="leading" id="M1m-e2-G0c"/>
+                                    <constraint firstAttribute="width" constant="80" id="U1W-J4-zvj"/>
+                                    <constraint firstItem="UOx-cR-ZIi" firstAttribute="leading" secondItem="hlW-N5-225" secondAttribute="leading" id="XGm-pm-8vQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="SeR-jK-J9J" secondAttribute="trailing" id="jzy-hP-E4z"/>
+                                    <constraint firstAttribute="bottom" secondItem="UOx-cR-ZIi" secondAttribute="bottom" id="k7b-GI-BDo"/>
+                                    <constraint firstAttribute="height" constant="80" id="paG-Ka-adD"/>
+                                    <constraint firstAttribute="trailing" secondItem="UOx-cR-ZIi" secondAttribute="trailing" id="q4b-XW-W1U"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="conchNormal" translatesAutoresizingMaskIntoConstraints="NO" id="2mf-Dh-VZo">
+                                <rect key="frame" x="97" y="321" width="181" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="Vu5-oq-bAL"/>
+                                    <constraint firstAttribute="height" constant="190" id="mq6-Sp-YGo"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnl-dL-QWG" userLabel="View_answer">
+                                <rect key="frame" x="69" y="526" width="237" height="116"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Bubble" translatesAutoresizingMaskIntoConstraints="NO" id="6wz-zd-i3Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="237" height="116"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대답" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWH-Mm-q1m">
+                                        <rect key="frame" x="0.0" y="58.666666666666629" width="237" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="r3o-hd-5NJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <color key="textColor" red="0.078678900539999999" green="0.024827904460000001" blue="0.10716540400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JWH-Mm-q1m" secondAttribute="trailing" id="CLv-Og-Ubc"/>
+                                    <constraint firstItem="6wz-zd-i3Q" firstAttribute="top" secondItem="xnl-dL-QWG" secondAttribute="top" id="LqM-KV-6Q5"/>
+                                    <constraint firstAttribute="bottom" secondItem="6wz-zd-i3Q" secondAttribute="bottom" id="N4f-0Q-hkf"/>
+                                    <constraint firstItem="6wz-zd-i3Q" firstAttribute="leading" secondItem="xnl-dL-QWG" secondAttribute="leading" id="YBv-1n-ypv"/>
+                                    <constraint firstAttribute="height" constant="116" id="Yxp-r9-IvZ"/>
+                                    <constraint firstItem="JWH-Mm-q1m" firstAttribute="centerY" secondItem="xnl-dL-QWG" secondAttribute="centerY" constant="15" id="c6E-FD-DVi"/>
+                                    <constraint firstItem="JWH-Mm-q1m" firstAttribute="leading" secondItem="xnl-dL-QWG" secondAttribute="leading" id="pEg-oc-ho0"/>
+                                    <constraint firstAttribute="trailing" secondItem="6wz-zd-i3Q" secondAttribute="trailing" id="qIg-IU-rwi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="2mf-Dh-VZo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0XI-kQ-mri"/>
+                            <constraint firstItem="38F-Kk-As1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2xb-Qu-C7P"/>
+                            <constraint firstItem="xnl-dL-QWG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7q7-b7-hmk"/>
+                            <constraint firstItem="2mf-Dh-VZo" firstAttribute="top" secondItem="hlW-N5-225" secondAttribute="bottom" constant="21" id="9Mk-GN-AJ3"/>
+                            <constraint firstItem="2mf-Dh-VZo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fqo-H3-XwZ"/>
+                            <constraint firstAttribute="bottom" secondItem="38F-Kk-As1" secondAttribute="bottom" id="Fqp-cw-Nw8"/>
+                            <constraint firstItem="kh0-YH-Myr" firstAttribute="top" secondItem="O6S-Wq-I46" secondAttribute="bottom" constant="22" id="G4C-5j-ima"/>
+                            <constraint firstItem="hlW-N5-225" firstAttribute="top" secondItem="kh0-YH-Myr" secondAttribute="bottom" constant="24" id="GTU-Bn-u9F"/>
+                            <constraint firstItem="xnl-dL-QWG" firstAttribute="top" secondItem="2mf-Dh-VZo" secondAttribute="bottom" constant="15" id="N61-lr-G9J"/>
+                            <constraint firstItem="O6S-Wq-I46" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qoy-69-MPQ"/>
+                            <constraint firstItem="38F-Kk-As1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U1w-T5-G5w"/>
+                            <constraint firstItem="38F-Kk-As1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ULH-IC-V01"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kh0-YH-Myr" secondAttribute="trailing" constant="42" id="UYz-dj-b8G"/>
+                            <constraint firstItem="kh0-YH-Myr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="eWX-I5-B8b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O6S-Wq-I46" secondAttribute="trailing" id="iht-3x-J7b"/>
+                            <constraint firstItem="O6S-Wq-I46" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="sAs-si-tju"/>
+                            <constraint firstItem="hlW-N5-225" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zXe-L2-RUR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Answer" destination="xnl-dL-QWG" id="sHT-cA-bQp"/>
+                        <outlet property="btnSend" destination="SeR-jK-J9J" id="XYE-qY-mam"/>
+                        <outlet property="btnSendImgView" destination="UOx-cR-ZIi" id="Z2J-bu-QRr"/>
+                        <outlet property="imgConch" destination="2mf-Dh-VZo" id="pDK-kY-98l"/>
+                        <outlet property="lbAnswer" destination="JWH-Mm-q1m" id="3U3-If-cxU"/>
+                        <outlet property="txtQuestion" destination="kh0-YH-Myr" id="rSD-Sh-E8Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="115.27093596059113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bubble" width="237" height="116"/>
+        <image name="bgNight" width="375" height="812"/>
+        <image name="btnRe" width="80" height="80"/>
+        <image name="conchNormal" width="181" height="190"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
